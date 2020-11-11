@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b3acba90-bb8d-40d4-9da6-836444c16c9b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,12 +50,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewFacade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitialiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1k9NuNpTk2AcJIaGIG9LKIcAA36" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -51,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605109089998</updated>
-      <workItem from="1605109110244" duration="1002000" />
+      <workItem from="1605109110244" duration="8358000" />
     </task>
     <servers />
   </component>
@@ -59,7 +118,18 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -68,6 +138,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="220" width="1015" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605109603601" />
+    <state x="733" y="221" key="RiderGenerateDialog" timestamp="1605111021357">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605111021357" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605109927390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

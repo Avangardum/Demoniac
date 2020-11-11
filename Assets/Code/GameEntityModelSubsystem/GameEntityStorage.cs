@@ -2,49 +2,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using Demoniac.GameManagerSubsystem;
+using UnityEngine;
 
 namespace Demoniac.GameEntityModelSubsystem
 {
     public class GameEntityStorage : IEnumerable<GameEntity>
     {
-        private GameManagerSubsystemFacade GameManagerSubsystemFacade;
+        private GameManagerSubsystemFacade _gameManagerSubsystemFacade;
 
-        private List<GameEntity> gameEntities;
+        private readonly List<GameEntity> _gameEntities = new List<GameEntity>();
 
-        public event Action GameEntitiesChanged;
+        public event Action<GameEntity> GameEntityCreated;
+        public event Action<GameEntity> GameEntityDeleted; 
 
         public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade)
         {
-            GameManagerSubsystemFacade = gameManagerSubsystemFacade;
-            GameManagerSubsystemFacade.UnityMethodListener.FixedUpdate_ += FrameAction;
+            _gameManagerSubsystemFacade = gameManagerSubsystemFacade;
+            _gameManagerSubsystemFacade.UnityMethodListener.FixedUpdate_ += FrameAction;
         }
 
         public GameEntity this[int i]
         {
-            get => gameEntities[i];
+            get => _gameEntities[i];
         }
 
         public IEnumerator<GameEntity> GetEnumerator()
         {
-            return ((IEnumerable<GameEntity>)gameEntities).GetEnumerator();
+            return ((IEnumerable<GameEntity>)_gameEntities).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<GameEntity>)gameEntities).GetEnumerator();
+            return ((IEnumerable<GameEntity>)_gameEntities).GetEnumerator();
         }
 
-        public void Add(GameEntity item) => gameEntities.Add(item);
+        public void Add(GameEntity item)
+        {
+            _gameEntities.Add(item);
+            item.Storage = this;
+            GameEntityCreated?.Invoke(item);
+        }
+        /// <summary>
+        /// Убирает объект их хранилища, но не удаляет его. Вызывать только из GameEntity.Delete()
+        /// </summary>
+        public void Remove(GameEntity item)
+        {
+            _gameEntities.Remove(item);
+            item.Storage = null;
+            GameEntityDeleted?.Invoke(item);
+        }
 
-        public void Remove(GameEntity item) => gameEntities.Remove(item);
-
-        public void RemoveAt(int index) => gameEntities.RemoveAt(index);
+        public void CreateTestGameEntity(Vector2 position, Vector2 size)
+        {
+            var item = new TestGameEntity(position, size);
+            Add(item);
+        }
 
         private void FrameAction(float frameTime)
         {
             foreach (var entity in this)
                 entity.FrameAction(frameTime);
-            GameEntitiesChanged?.Invoke();
         }
-    } 
+    }
 }
