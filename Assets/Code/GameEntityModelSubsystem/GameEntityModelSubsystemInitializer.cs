@@ -1,4 +1,5 @@
 ﻿using Demoniac.GameManagerSubsystem;
+using Demoniac.PlayerInputSubsystem;
 
 namespace Demoniac.GameEntityModelSubsystem
 {
@@ -13,9 +14,9 @@ namespace Demoniac.GameEntityModelSubsystem
             Facade = new GameEntityModelSubsystemFacade();
         }
 
-        public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade)
+        public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade, PlayerInputSubsystemFacade playerInputSubsystemFacade)
         {
-            gameEntityStorage.InjectDependencies(gameManagerSubsystemFacade);
+            gameEntityStorage.InjectDependencies(gameManagerSubsystemFacade, playerInputSubsystemFacade);
             Facade.InjectDependencies(gameEntityStorage);
         }
     } 

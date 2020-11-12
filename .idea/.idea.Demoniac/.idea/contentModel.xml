@@ -10,7 +10,7 @@
           <e p="GameEntityModelSubsystem" t="Include">
             <e p="GameEntity.cs" t="Include" />
             <e p="GameEntityModelSubsystemFacade.cs" t="Include" />
-            <e p="GameEntityModelSubsystemInitialiser.cs" t="Include" />
+            <e p="GameEntityModelSubsystemInitializer.cs" t="Include" />
             <e p="GameEntityStorage.cs" t="Include" />
             <e p="PlayerCharacter.cs" t="Include" />
             <e p="TestCircle.cs" t="Include" />
@@ -22,7 +22,7 @@
             <e p="AnimatorControllerStorage.cs" t="Include" />
             <e p="GameEntityView.cs" t="Include" />
             <e p="GameEntityViewStorage.cs" t="Include" />
-            <e p="GameEntityViewSubsystemInitialiser.cs" t="Include" />
+            <e p="GameEntityViewSubsystemInitializer.cs" t="Include" />
             <e p="NotAnimatedGameEntityView.cs" t="Include" />
             <e p="PlayerCharacterView.cs" t="Include" />
             <e p="SpriteStorage.cs" t="Include" />
@@ -33,12 +33,17 @@
           <e p="GameManagerSubsystem" t="Include">
             <e p="GameManagerSubsystemFacade.cs" t="Include" />
             <e p="GameManagerSubsystemInitialiser.cs" t="Include" />
-            <e p="SubsystemInitialiser.cs" t="Include" />
+            <e p="SubsystemInitializer.cs" t="Include" />
             <e p="UnityMethodListener.cs" t="Include" />
+          </e>
+          <e p="PlayerInputSubsystem" t="Include">
+            <e p="KeyboardAndGamepadPlayerInput.cs" t="Include" />
+            <e p="PlayerInputSubsystemFacade.cs" t="Include" />
+            <e p="PlayerInputSubsystemInitializer.cs" t="Include" />
           </e>
           <e p="TestSubsystem" t="Include">
             <e p="Test.cs" t="Include" />
-            <e p="TestSubsystemInitialiser.cs" t="Include" />
+            <e p="TestSubsystemInitializer.cs" t="Include" />
           </e>
         </e>
       </e>

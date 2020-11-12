@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Demoniac.GameManagerSubsystem;
+using Demoniac.PlayerInputSubsystem;
 using UnityEngine;
 
 namespace Demoniac.GameEntityModelSubsystem
@@ -9,16 +10,19 @@ namespace Demoniac.GameEntityModelSubsystem
     public class GameEntityStorage : IEnumerable<GameEntity>
     {
         private GameManagerSubsystemFacade _gameManagerSubsystemFacade;
+        private PlayerInputSubsystemFacade _playerInputSubsystemFacade;
 
         private readonly List<GameEntity> _gameEntities = new List<GameEntity>();
 
         public event Action<GameEntity> GameEntityCreated;
         public event Action<GameEntity> GameEntityDeleted; 
 
-        public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade)
+        public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade, PlayerInputSubsystemFacade playerInputSubsystemFacade)
         {
             _gameManagerSubsystemFacade = gameManagerSubsystemFacade;
             _gameManagerSubsystemFacade.UnityMethodListener._FixedUpdate += FrameAction;
+
+            _playerInputSubsystemFacade = playerInputSubsystemFacade;
         }
 
         public GameEntity this[int i]
@@ -54,7 +58,7 @@ namespace Demoniac.GameEntityModelSubsystem
 
         public void CreateTestSquare(Vector2 position)
         {
-            Add(new TestSquare(position));
+            Add(new TestSquare(position, _playerInputSubsystemFacade));
         }
 
         public void CreateTestCircle(Vector2 position)
