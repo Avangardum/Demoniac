@@ -18,7 +18,7 @@ namespace Demoniac.GameEntityModelSubsystem
         public void InjectDependencies(GameManagerSubsystemFacade gameManagerSubsystemFacade)
         {
             _gameManagerSubsystemFacade = gameManagerSubsystemFacade;
-            _gameManagerSubsystemFacade.UnityMethodListener.FixedUpdate_ += FrameAction;
+            _gameManagerSubsystemFacade.UnityMethodListener._FixedUpdate += FrameAction;
         }
 
         public GameEntity this[int i]
@@ -52,10 +52,15 @@ namespace Demoniac.GameEntityModelSubsystem
             GameEntityDeleted?.Invoke(item);
         }
 
-        public void CreateTestGameEntity(Vector2 position, Vector2 size)
+        public void CreateTestSquare(Vector2 position, Vector2 size)
         {
-            var item = new TestGameEntity(position, size);
+            var item = new TestSquare(position, size);
             Add(item);
+        }
+
+        public void CreateTestCircle(Vector2 position)
+        {
+            Add(new TestCircle(position));
         }
 
         private void FrameAction(float frameTime)

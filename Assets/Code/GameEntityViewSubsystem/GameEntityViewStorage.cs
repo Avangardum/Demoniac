@@ -1,20 +1,33 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Demoniac.GameEntityModelSubsystem;
-using Demoniac.GameManagerSubsystem;
+using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
     public class GameEntityViewStorage : IEnumerable<GameEntityView>
     {
         private readonly List<GameEntityView> _gameEntityViews = new List<GameEntityView>();
-        
+        //private readonly Dictionary<Type, Func<GameEntity, GameEntityView>> _viewCreationMethods;
         private GameEntityStorage _gameEntityStorage;
+        private SpriteStorage _spriteStorage;
+        private AnimationControllerStorage _animationControllerStorage;
 
-        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade)
+        // public GameEntityViewStorage()
+        // {
+        //     _viewCreationMethods = new Dictionary<Type, Func<GameEntity, GameEntityView>>()
+        //     {
+        //         {typeof(TestGameEntity), gameEntity => new TestGameEntityView(gameEntity, _spriteLoader["Square"])}
+        //     };
+        // }
+        
+        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade, SpriteStorage spriteStorage, AnimationControllerStorage animationControllerStorage)
         {
             _gameEntityStorage = gameEntityModelSubsystemFacade.GameEntityStorage;
+            _spriteStorage = spriteStorage;
+            _animationControllerStorage = animationControllerStorage;
             _gameEntityStorage.GameEntityCreated += OnGameEntityCreated;
             _gameEntityStorage.GameEntityDeleted += OnGameEntityDeleted;
         }
@@ -53,7 +66,12 @@ namespace Demoniac.GameEntityViewSubsystem
 
         private void OnGameEntityCreated(GameEntity gameEntity)
         {
-            Add(new GameEntityView(gameEntity));
+            if (gameEntity is TestSquare)
+                Add(new TestSquareView(gameEntity, _spriteStorage.Square));
+            else if (gameEntity is TestCircle)
+                Add(new TestCircleView(gameEntity, _spriteStorage.Cirlce));
+            else
+                throw new Exception($"Cannot create view for {gameEntity.GetType()}");
         }
         
         private void OnGameEntityDeleted(GameEntity gameEntity)

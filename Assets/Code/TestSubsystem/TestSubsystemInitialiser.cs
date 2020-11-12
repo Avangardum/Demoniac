@@ -1,6 +1,7 @@
 ﻿using Demoniac.GameEntityModelSubsystem;
+using Demoniac.GameManagerSubsystem;
 
-namespace TestSubsystem
+namespace Demoniac.TestSubsystem
 {
     public class TestSubsystemInitialiser
     {
@@ -11,9 +12,9 @@ namespace TestSubsystem
             _test = new Test();
         }
 
-        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade)
+        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade, GameManagerSubsystemFacade gameManagerSubsystemFacade)
         {
-            _test.InjectDependencies(gameEntityModelSubsystemFacade);
+            _test.InjectDependencies(gameEntityModelSubsystemFacade, gameManagerSubsystemFacade);
         }
     }
 }

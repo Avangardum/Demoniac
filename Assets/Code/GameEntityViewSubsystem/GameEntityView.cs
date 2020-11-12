@@ -3,22 +3,21 @@ using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class GameEntityView
+    public abstract class GameEntityView
     {
         public readonly GameEntity GameEntity;
         public GameEntityViewStorage Storage;
-        
-        private readonly GameObject _gameObject;
-        private readonly SpriteRenderer _spriteRenderer;
 
-        public GameEntityView(GameEntity gameEntity)
+        protected readonly GameObject _gameObject;
+        protected readonly SpriteRenderer _spriteRenderer;
+
+        protected GameEntityView(GameEntity gameEntity)
         {
             GameEntity = gameEntity;
-            _gameObject = new GameObject("GameEntityView");
+            _gameObject = new GameObject(GetType().Name);
             _gameObject.transform.localPosition = gameEntity.Position;
             _gameObject.transform.localScale = gameEntity.Size;
             _spriteRenderer = _gameObject.AddComponent<SpriteRenderer>();
-            _spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/Square");
 
             GameEntity.PositionChanged += SetPosition;
             GameEntity.SizeChanged += SetSize;
@@ -26,8 +25,8 @@ namespace Demoniac.GameEntityViewSubsystem
         }
         
         private void SetPosition(Vector2 position) => _gameObject.transform.position = position;
-        
-        private void SetSize(Vector2 size) { }
+
+        private void SetSize(Vector2 size) => _gameObject.transform.localScale = new Vector3(size.x, size.y, 1);
 
         private void Delete()
         {

@@ -5,30 +5,30 @@ namespace Demoniac.GameManagerSubsystem
 {
     public class UnityMethodListener : MonoBehaviour
     {
-        public event Action Awake_;
-        public event Action Start_;
-        public event Action<float> Update_;
-        public event Action<float> FixedUpdate_;
+        public event Action _Awake;
+        public event Action _Start;
+        public event Action<float> _Update;
+        public event Action<float> _FixedUpdate;
 
         private void Awake()
         {
             new SubsystemInitialiser().Initialise();
-            Awake_?.Invoke();
+            _Awake?.Invoke();
         }
 
         private void Start()
         {
-            Start_?.Invoke();
+            _Start?.Invoke();
         }
 
         private void Update()
         {
-            Update_?.Invoke(Time.deltaTime);
+            _Update?.Invoke(Time.deltaTime);
         }
 
         private void FixedUpdate()
         {
-            FixedUpdate_?.Invoke(Time.fixedDeltaTime);
+            _FixedUpdate?.Invoke(Time.fixedDeltaTime);
         }
     }
 }

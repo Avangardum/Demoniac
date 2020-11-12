@@ -46,5 +46,8 @@ namespace Demoniac.GameEntityModelSubsystem
             Storage.Remove(this);
             Deleted?.Invoke();
         }
+
+        public void Move(Vector2 move) => Position += move;
+        public void Move(float x, float y) => Move(new Vector2(x, y));
     } 
 }
