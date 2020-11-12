@@ -5,10 +5,10 @@ namespace Demoniac.GameEntityViewSubsystem
 {
     public class SpriteStorage
     {
-        private const string _squarePath = "Sprites/Square";
-        private const string _circlePath = "Sprites/Circle";
+        private const string SquarePath = "Sprites/Square";
+        private const string CirclePath = "Sprites/Circle";
 
-        public readonly Sprite Square = Resources.Load<Sprite>(_squarePath);
-        public readonly Sprite Cirlce = Resources.Load<Sprite>(_circlePath);
+        public readonly Sprite Square = Resources.Load<Sprite>(SquarePath);
+        public readonly Sprite Cirlce = Resources.Load<Sprite>(CirclePath);
     }
 }

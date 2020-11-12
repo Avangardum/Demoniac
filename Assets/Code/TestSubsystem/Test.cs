@@ -18,9 +18,9 @@ namespace Demoniac.TestSubsystem
 
         private void StartTesting()
         {
-            _gameEntityStorage.CreateTestSquare(Vector2.zero, Vector2.one);
-            _gameEntityStorage.CreateTestSquare(new Vector2(3, 3), new Vector2(2, 2));
+            _gameEntityStorage.CreateTestSquare(Vector2.zero);
             _gameEntityStorage.CreateTestCircle(new Vector2(-8, -3));
+            _gameEntityStorage.CreateTestHexagon(new Vector2(3, 3));
         }
     }
 }

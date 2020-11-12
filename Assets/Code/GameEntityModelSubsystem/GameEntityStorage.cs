@@ -52,16 +52,17 @@ namespace Demoniac.GameEntityModelSubsystem
             GameEntityDeleted?.Invoke(item);
         }
 
-        public void CreateTestSquare(Vector2 position, Vector2 size)
+        public void CreateTestSquare(Vector2 position)
         {
-            var item = new TestSquare(position, size);
-            Add(item);
+            Add(new TestSquare(position));
         }
 
         public void CreateTestCircle(Vector2 position)
         {
             Add(new TestCircle(position));
         }
+        
+        public void CreateTestHexagon(Vector2 position) => Add(new TestHexagon(position));
 
         private void FrameAction(float frameTime)
         {

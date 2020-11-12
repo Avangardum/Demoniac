@@ -13,7 +13,7 @@ namespace Demoniac.GameEntityViewSubsystem
         //private readonly Dictionary<Type, Func<GameEntity, GameEntityView>> _viewCreationMethods;
         private GameEntityStorage _gameEntityStorage;
         private SpriteStorage _spriteStorage;
-        private AnimationControllerStorage _animationControllerStorage;
+        private AnimatorControllerStorage _animatorControllerStorage;
 
         // public GameEntityViewStorage()
         // {
@@ -23,11 +23,11 @@ namespace Demoniac.GameEntityViewSubsystem
         //     };
         // }
         
-        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade, SpriteStorage spriteStorage, AnimationControllerStorage animationControllerStorage)
+        public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade, SpriteStorage spriteStorage, AnimatorControllerStorage animatorControllerStorage)
         {
             _gameEntityStorage = gameEntityModelSubsystemFacade.GameEntityStorage;
             _spriteStorage = spriteStorage;
-            _animationControllerStorage = animationControllerStorage;
+            _animatorControllerStorage = animatorControllerStorage;
             _gameEntityStorage.GameEntityCreated += OnGameEntityCreated;
             _gameEntityStorage.GameEntityDeleted += OnGameEntityDeleted;
         }
@@ -70,6 +70,8 @@ namespace Demoniac.GameEntityViewSubsystem
                 Add(new TestSquareView(gameEntity, _spriteStorage.Square));
             else if (gameEntity is TestCircle)
                 Add(new TestCircleView(gameEntity, _spriteStorage.Cirlce));
+            else if (gameEntity is TestHexagon)
+                Add(new TestHexagonView(gameEntity ,_animatorControllerStorage.TestHexagon));
             else
                 throw new Exception($"Cannot create view for {gameEntity.GetType()}");
         }

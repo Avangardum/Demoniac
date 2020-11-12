@@ -14,10 +14,10 @@ namespace Demoniac.GameEntityModelSubsystem
         private Vector2 _position;
         private Vector2 _size;
 
-        public GameEntity(Vector2 position, Vector2 size)
+        public GameEntity(Vector2 position)
         {
             _position = position;
-            _size = size;
+            _size = Vector2.one;
         }
         public Vector2 Position
         {

@@ -12,7 +12,7 @@ namespace Demoniac.GameEntityModelSubsystem
         private float _currentSize = 1;
         private bool _isGrowing = true;
         
-        public TestCircle(Vector2 position) : base(position, Vector2.one)
+        public TestCircle(Vector2 position) : base(position)
         {
         }
 

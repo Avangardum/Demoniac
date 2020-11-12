@@ -20,35 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3acba90-bb8d-40d4-9da6-836444c16c9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/NotAnimatedGameEntityView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/NotAnimatedGameEntityView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestCircleView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestCircleView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Circle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestHexagon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestHexagon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatedGameEntityView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatedGameEntityView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestHexagonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestHexagonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/TestHexagon.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/TestHexagon/Color Change.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/TestHexagon/Color Change.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animator Controllers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animator Controllers/Test Hexagon.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animator Controllers/Test Hexagon.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Hexagon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Hexagon.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitialiser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/UnityMethodListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/UnityMethodListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewFacade.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestGameEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/WhiteSquareView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerLoader.cs" />
@@ -76,22 +75,28 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/NotAnimatedGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestCircleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteDictionary.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerDictionary.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/UnityMethodListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/AnimatedGameEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestHexagon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatedGameEntityView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestHexagonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
       </list>
     </option>
   </component>
@@ -140,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605109089998</updated>
       <workItem from="1605109110244" duration="8965000" />
-      <workItem from="1605186522089" duration="7870000" />
+      <workItem from="1605186522089" duration="9903000" />
     </task>
     <servers />
   </component>

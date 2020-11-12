@@ -9,7 +9,7 @@ namespace Demoniac.GameEntityModelSubsystem
             base.FrameAction(frameTime);
         }
 
-        public PlayerCharacter(Vector2 position, Vector2 size) : base(position, size)
+        public PlayerCharacter(Vector2 position) : base(position)
         {
         }
     } 
