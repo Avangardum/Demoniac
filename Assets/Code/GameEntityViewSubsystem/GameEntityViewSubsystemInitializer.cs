@@ -2,7 +2,7 @@
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class GameEntityViewSubsystemInitialiser
+    public class GameEntityViewSubsystemInitializer
     {
         private GameEntityViewStorage _gameEntityViewStorage;
         private SpriteStorage _spriteStorage;

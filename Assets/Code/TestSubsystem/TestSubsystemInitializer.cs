@@ -3,7 +3,7 @@ using Demoniac.GameManagerSubsystem;
 
 namespace Demoniac.TestSubsystem
 {
-    public class TestSubsystemInitialiser
+    public class TestSubsystemInitializer
     {
         private Test _test;
         

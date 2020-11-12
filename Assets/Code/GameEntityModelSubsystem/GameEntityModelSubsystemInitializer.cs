@@ -2,7 +2,7 @@
 
 namespace Demoniac.GameEntityModelSubsystem
 {
-    public class GameEntityModelSubsystemInitialiser
+    public class GameEntityModelSubsystemInitializer
     {
         private GameEntityStorage gameEntityStorage;
         public GameEntityModelSubsystemFacade Facade { get; private set; }

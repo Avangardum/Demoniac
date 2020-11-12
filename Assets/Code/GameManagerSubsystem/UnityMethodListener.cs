@@ -12,7 +12,7 @@ namespace Demoniac.GameManagerSubsystem
 
         private void Awake()
         {
-            new SubsystemInitialiser().Initialise();
+            new SubsystemInitializer().Initialise();
             _Awake?.Invoke();
         }
 
