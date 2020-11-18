@@ -5,12 +5,14 @@ namespace Demoniac.GameEntityViewSubsystem
 {
     public abstract class GameEntityView
     {
+        protected static SpriteStorage SpriteStorage;
+        
         public readonly GameEntity GameEntity;
         public GameEntityViewStorage Storage;
 
         protected readonly GameObject _gameObject;
         protected readonly SpriteRenderer _spriteRenderer;
-
+        
         protected GameEntityView(GameEntity gameEntity)
         {
             GameEntity = gameEntity;
@@ -22,6 +24,17 @@ namespace Demoniac.GameEntityViewSubsystem
             GameEntity.PositionChanged += SetPosition;
             GameEntity.SizeChanged += SetSize;
             GameEntity.Deleted += Delete;
+        }
+
+        protected Sprite Sprite
+        {
+            get => _spriteRenderer.sprite;
+            set => _spriteRenderer.sprite = value;
+        }
+
+        public static void InjectDependenciesStatic(SpriteStorage spriteStorage)
+        {
+            SpriteStorage = spriteStorage;
         }
         
         private void SetPosition(Vector2 position) => _gameObject.transform.position = position;

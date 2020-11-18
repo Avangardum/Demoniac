@@ -3,25 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Demoniac.GameEntityModelSubsystem;
-using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
     public class GameEntityViewStorage : IEnumerable<GameEntityView>
     {
         private readonly List<GameEntityView> _gameEntityViews = new List<GameEntityView>();
-        //private readonly Dictionary<Type, Func<GameEntity, GameEntityView>> _viewCreationMethods;
+
+        private readonly Dictionary<Type, Type> _gameEntityViewTypes = new Dictionary<Type, Type>()
+        {
+            {typeof(TestSquare), typeof(TestSquareView)},
+            {typeof(TestCircle), typeof(TestCircleView)},
+            {typeof(TestHexagon), typeof(TestHexagonView)},
+            {typeof(PlayerCharacter), typeof(PlayerCharacterView)},
+            {typeof(TestPlatform), typeof(TestPlatformView)}
+        };
         private GameEntityStorage _gameEntityStorage;
         private SpriteStorage _spriteStorage;
         private AnimatorControllerStorage _animatorControllerStorage;
 
-        // public GameEntityViewStorage()
-        // {
-        //     _viewCreationMethods = new Dictionary<Type, Func<GameEntity, GameEntityView>>()
-        //     {
-        //         {typeof(TestGameEntity), gameEntity => new TestGameEntityView(gameEntity, _spriteLoader["Square"])}
-        //     };
-        // }
+        public GameEntityViewStorage()
+        {
+            
+        }
         
         public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade, SpriteStorage spriteStorage, AnimatorControllerStorage animatorControllerStorage)
         {
@@ -66,18 +70,21 @@ namespace Demoniac.GameEntityViewSubsystem
 
         private void OnGameEntityCreated(GameEntity gameEntity)
         {
-            if (gameEntity is TestSquare)
-                Add(new TestSquareView(gameEntity, _spriteStorage.Square));
-            else if (gameEntity is TestCircle)
-                Add(new TestCircleView(gameEntity, _spriteStorage.Cirlce));
-            else if (gameEntity is TestHexagon)
-                Add(new TestHexagonView(gameEntity ,_animatorControllerStorage.TestHexagon));
-            else if (gameEntity is TestPlatform)
-                Add(new TestPlatformView(gameEntity ,_spriteStorage.Square));
-            else if (gameEntity is PlayerCharacter)
-                Add(new PlayerCharacterView(gameEntity, _animatorControllerStorage.PlayerCharacter));
-            else
-                throw new Exception($"Cannot create view for {gameEntity.GetType()}");
+            Type viewType = _gameEntityViewTypes[gameEntity.GetType()];
+            GameEntityView view = (GameEntityView)Activator.CreateInstance(viewType, gameEntity);
+            Add(view);
+            // if (gameEntity is TestSquare)
+            //     Add(new TestSquareView(gameEntity));
+            // else if (gameEntity is TestCircle)
+            //     Add(new TestCircleView(gameEntity));
+            // else if (gameEntity is TestHexagon)
+            //     Add(new TestHexagonView(gameEntity));
+            // else if (gameEntity is TestPlatform)
+            //     Add(new TestPlatformView(gameEntity));
+            // else if (gameEntity is PlayerCharacter)
+            //     Add(new PlayerCharacterView(gameEntity));
+            // else
+            //     throw new Exception($"Cannot create view for {gameEntity.GetType()}");
         }
         
         private void OnGameEntityDeleted(GameEntity gameEntity)

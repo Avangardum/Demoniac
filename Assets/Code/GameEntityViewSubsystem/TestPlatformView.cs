@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class TestPlatformView : NotAnimatedGameEntityView
+    public class TestPlatformView : GameEntityView
     {
-        public TestPlatformView(GameEntity gameEntity, Sprite sprite) : base(gameEntity, sprite)
+        public TestPlatformView(GameEntity gameEntity) : base(gameEntity)
         {
+            Sprite = SpriteStorage.Square;
         }
     }
 }

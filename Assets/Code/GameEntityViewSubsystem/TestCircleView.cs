@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class TestCircleView : NotAnimatedGameEntityView
+    public class TestCircleView : GameEntityView
     {
-        public TestCircleView(GameEntity gameEntity, Sprite sprite) : base(gameEntity, sprite)
+        public TestCircleView(GameEntity gameEntity) : base(gameEntity)
         {
+            Sprite = SpriteStorage.Cirlce;
         }
     }
 }

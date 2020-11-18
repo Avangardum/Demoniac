@@ -5,8 +5,10 @@ namespace Demoniac.GameEntityViewSubsystem
 {
     public class TestHexagonView : AnimatedGameEntityView
     {
-        public TestHexagonView(GameEntity gameEntity, RuntimeAnimatorController animatorController) : base(gameEntity, animatorController)
+        public TestHexagonView(GameEntity gameEntity) : base(gameEntity)
         {
+            Sprite = SpriteStorage.Hexagon;
+            AnimatorController = AnimatorControllerStorage.TestHexagon;
         }
     }
 }

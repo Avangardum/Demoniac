@@ -3,12 +3,13 @@ using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class TestSquareView : NotAnimatedGameEntityView
+    public class TestSquareView : GameEntityView
     {
-        public TestSquareView(GameEntity gameEntity, Sprite sprite) : base(gameEntity, sprite)
+        public TestSquareView(GameEntity gameEntity) : base(gameEntity)
         {
             TestSquare testSquare = (TestSquare)gameEntity;
             testSquare.ColorChanged += ChangeColor;
+            Sprite = SpriteStorage.Square;
         }
 
         private void ChangeColor()

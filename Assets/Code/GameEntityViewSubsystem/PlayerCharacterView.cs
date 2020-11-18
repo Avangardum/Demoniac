@@ -5,9 +5,10 @@ namespace Demoniac.GameEntityViewSubsystem
 {
     public class PlayerCharacterView : AnimatedGameEntityView
     {
-        public PlayerCharacterView(GameEntity gameEntity, RuntimeAnimatorController animatorController) : base(gameEntity, animatorController)
+        public PlayerCharacterView(GameEntity gameEntity) : base(gameEntity)
         {
-            
+            Sprite = SpriteStorage.Square;
+            AnimatorController = AnimatorControllerStorage.PlayerCharacter;
         }
     }
 }

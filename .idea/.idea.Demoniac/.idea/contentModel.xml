@@ -25,7 +25,6 @@
             <e p="GameEntityView.cs" t="Include" />
             <e p="GameEntityViewStorage.cs" t="Include" />
             <e p="GameEntityViewSubsystemInitializer.cs" t="Include" />
-            <e p="NotAnimatedGameEntityView.cs" t="Include" />
             <e p="PlayerCharacterView.cs" t="Include" />
             <e p="SpriteStorage.cs" t="Include" />
             <e p="TestCircleView.cs" t="Include" />

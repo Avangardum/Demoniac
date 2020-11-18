@@ -18,6 +18,8 @@ namespace Demoniac.GameEntityViewSubsystem
         public void InjectDependencies(GameEntityModelSubsystemFacade gameEntityModelSubsystemFacade)
         {
             _gameEntityViewStorage.InjectDependencies(gameEntityModelSubsystemFacade, _spriteStorage, _animatorControllerStorage);
+            GameEntityView.InjectDependenciesStatic(_spriteStorage);
+            AnimatedGameEntityView.InjectDependenciesStatic(_animatorControllerStorage);
         }
     } 
 }

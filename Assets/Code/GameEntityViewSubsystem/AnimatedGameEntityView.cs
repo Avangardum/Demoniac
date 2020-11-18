@@ -3,16 +3,26 @@ using UnityEngine;
 
 namespace Demoniac.GameEntityViewSubsystem
 {
-    public class AnimatedGameEntityView : GameEntityView
+    public abstract class AnimatedGameEntityView : GameEntityView
     {
-        private Animator _animator;
-        private RuntimeAnimatorController _animatorController;
+        protected static AnimatorControllerStorage AnimatorControllerStorage;
         
-        public AnimatedGameEntityView(GameEntity gameEntity, RuntimeAnimatorController animatorController) : base(gameEntity)
+        protected readonly Animator Animator;
+        
+        protected AnimatedGameEntityView(GameEntity gameEntity) : base(gameEntity)
         {
-            _animatorController = animatorController;
-            _animator = _gameObject.AddComponent<Animator>();
-            _animator.runtimeAnimatorController = animatorController;
+            Animator = _gameObject.AddComponent<Animator>();
+        }
+
+        protected RuntimeAnimatorController AnimatorController
+        {
+            get => Animator.runtimeAnimatorController;
+            set => Animator.runtimeAnimatorController = value;
+        }
+        
+        public static void InjectDependenciesStatic(AnimatorControllerStorage animatorControllerStorage)
+        {
+            AnimatorControllerStorage = animatorControllerStorage;
         }
     }
 }
