@@ -13,8 +13,10 @@
             <e p="GameEntityModelSubsystemInitializer.cs" t="Include" />
             <e p="GameEntityStorage.cs" t="Include" />
             <e p="PlayerCharacter.cs" t="Include" />
+            <e p="TerrainElement.cs" t="Include" />
             <e p="TestCircle.cs" t="Include" />
             <e p="TestHexagon.cs" t="Include" />
+            <e p="TestPlatform.cs" t="Include" />
             <e p="TestSquare.cs" t="Include" />
           </e>
           <e p="GameEntityViewSubsystem" t="Include">
@@ -28,6 +30,7 @@
             <e p="SpriteStorage.cs" t="Include" />
             <e p="TestCircleView.cs" t="Include" />
             <e p="TestHexagonView.cs" t="Include" />
+            <e p="TestPlatformView.cs" t="Include" />
             <e p="TestSquareView.cs" t="Include" />
           </e>
           <e p="GameManagerSubsystem" t="Include">

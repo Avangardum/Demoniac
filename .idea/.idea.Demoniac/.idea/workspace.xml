@@ -19,23 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3acba90-bb8d-40d4-9da6-836444c16c9b" name="Default Changelist" comment="Исправил initialiser на initializer">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemInitializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemInitializer.cs.meta" afterDir="false" />
+    <list default="true" id="b3acba90-bb8d-40d4-9da6-836444c16c9b" name="Default Changelist" comment="Сделал PlayerInputSubsystem">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestPlatformView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestPlatformView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/PlayerCharacter.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/PlayerCharacter/Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animations/PlayerCharacter/Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animator Controllers/Player Character.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animator Controllers/Player Character.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityModelSubsystemInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityModelSubsystemInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/Demoniac/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD504953-D81E-4C1F-9A1B-8F7BBFB7FDA8/84/9dc4905b/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -59,7 +62,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitialiser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/NotAnimatedGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestCircleView.cs" />
@@ -70,25 +72,19 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/UnityMethodListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitialiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitialiser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimationControllerStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/AnimatedGameEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestHexagon.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestCircle.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatedGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestHexagonView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemInitialiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/TestSubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardPlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/GamepadPlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityModelSubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemInitializer.cs" />
@@ -96,6 +92,16 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestSquareView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/TestPlatformView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/SpriteStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
       </list>
     </option>
   </component>
@@ -144,7 +150,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605109089998</updated>
       <workItem from="1605109110244" duration="8965000" />
-      <workItem from="1605186522089" duration="16400000" />
+      <workItem from="1605186522089" duration="16467000" />
+      <workItem from="1605268432179" duration="2156000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил анимированные объекты">
       <created>1605197081072</created>
@@ -160,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605198680868</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Сделал PlayerInputSubsystem">
+      <created>1605204456008</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605204456008</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +199,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Добавил анимированные объекты" />
     <MESSAGE value="Исправил initialiser на initializer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил initialiser на initializer" />
+    <MESSAGE value="Сделал PlayerInputSubsystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал PlayerInputSubsystem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="220" width="1015" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1605109603601">
@@ -200,9 +215,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605109927390" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605198689227">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605204460825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605198689227" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605204460825" />
   </component>
 </project>

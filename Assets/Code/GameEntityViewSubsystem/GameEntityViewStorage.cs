@@ -72,6 +72,10 @@ namespace Demoniac.GameEntityViewSubsystem
                 Add(new TestCircleView(gameEntity, _spriteStorage.Cirlce));
             else if (gameEntity is TestHexagon)
                 Add(new TestHexagonView(gameEntity ,_animatorControllerStorage.TestHexagon));
+            else if (gameEntity is TestPlatform)
+                Add(new TestPlatformView(gameEntity ,_spriteStorage.Square));
+            else if (gameEntity is PlayerCharacter)
+                Add(new PlayerCharacterView(gameEntity, _animatorControllerStorage.PlayerCharacter));
             else
                 throw new Exception($"Cannot create view for {gameEntity.GetType()}");
         }
