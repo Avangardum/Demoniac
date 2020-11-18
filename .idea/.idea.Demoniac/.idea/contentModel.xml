@@ -13,7 +13,7 @@
             <e p="GameEntityModelSubsystemInitializer.cs" t="Include" />
             <e p="GameEntityStorage.cs" t="Include" />
             <e p="PlayerCharacter.cs" t="Include" />
-            <e p="TerrainElement.cs" t="Include" />
+            <e p="SolidTerrainElement.cs" t="Include" />
             <e p="TestCircle.cs" t="Include" />
             <e p="TestHexagon.cs" t="Include" />
             <e p="TestPlatform.cs" t="Include" />

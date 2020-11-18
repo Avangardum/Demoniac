@@ -2,7 +2,7 @@
 
 namespace Demoniac.GameEntityModelSubsystem
 {
-    public class TestPlatform : TerrainElement
+    public class TestPlatform : SolidTerrainElement
     {
         public TestPlatform(Vector2 position) : base(position)
         {
