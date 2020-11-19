@@ -21,7 +21,7 @@ namespace Demoniac.GameEntityModelSubsystem
         {
             base.FrameAction(frameTime);
             Move(_playerInput.Horisontal * frameTime * Speed, 0);
-            if (_playerInput.Jump)
+            if (_playerInput.JumpDown)
             {
                 ColorChanged?.Invoke();
             }

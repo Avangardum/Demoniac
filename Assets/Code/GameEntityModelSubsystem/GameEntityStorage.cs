@@ -69,7 +69,7 @@ namespace Demoniac.GameEntityModelSubsystem
         public void CreateTestHexagon(Vector2 position) => Add(new TestHexagon(position));
         public void CreateTestPlatform(Vector2 position) => Add(new TestPlatform(position));
         
-        public void CreatePlayerCharacter(Vector2 position) => Add(new PlayerCharacter(position));
+        public void CreatePlayerCharacter(Vector2 position) => Add(new PlayerCharacter(position, _playerInputSubsystemFacade));
         private void FrameAction(float frameTime)
         {
             foreach (var entity in this)

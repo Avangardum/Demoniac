@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3acba90-bb8d-40d4-9da6-836444c16c9b" name="Default Changelist" comment="Сделал PlayerInputSubsystem">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/SolidTerrainElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demoniac/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/SolidTerrainElement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +69,8 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameManagerSubsystem/SubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestSquare.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TerrainElement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/TestPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/AnimatorControllerStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/NotAnimatedGameEntityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewSubsystemInitializer.cs" />
@@ -88,8 +84,11 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/PlayerCharacterView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityViewSubsystem/GameEntityViewStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/GameEntityStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TestSubsystem/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/KeyboardAndGamepadPlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/PlayerInputSubsystem/PlayerInputSubsystemFacade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameEntityModelSubsystem/PlayerCharacter.cs" />
       </list>
     </option>
   </component>
@@ -103,17 +102,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="444">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="444" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -169,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605717481190</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил в gitignore строки для Rider">
+      <created>1605799254964</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605799254964</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,13 +204,82 @@
     <MESSAGE value="Исправил initialiser на initializer" />
     <MESSAGE value="Сделал PlayerInputSubsystem" />
     <MESSAGE value="Изменил устройство GameEntityViewSubsystem. Теперь визуальные объекты принимают только свой игровой объект и самостоятельно получают свои спрайты и контроллеры аниматора" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил устройство GameEntityViewSubsystem. Теперь визуальные объекты принимают только свой игровой объект и самостоятельно получают свои спрайты и контроллеры аниматора" />
+    <MESSAGE value="Добавил в gitignore строки для Rider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в gitignore строки для Rider" />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="220" width="1015" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1605109603601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="220" width="1015" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605109603601" />
+    <state width="482" height="464" key="DebuggerActiveHint" timestamp="1605802755268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="482" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1605802755268" />
+    <state width="1877" height="292" key="GridCell.Tab.0.bottom" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.0.center" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.0.left" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.0.right" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.1.bottom" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.1.center" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.1.left" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.1.right" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.2.bottom" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.2.center" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.2.left" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.2.right" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.3.bottom" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.3.center" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.3.left" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
+    <state width="1877" height="292" key="GridCell.Tab.3.right" timestamp="1605803522632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="292" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605803522632" />
     <state x="733" y="221" key="RiderGenerateDialog" timestamp="1605111021357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,9 +292,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605109927390" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605717485143">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605799258139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605717485143" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605799258139" />
   </component>
 </project>

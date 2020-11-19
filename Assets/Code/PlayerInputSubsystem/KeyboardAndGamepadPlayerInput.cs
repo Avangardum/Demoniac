@@ -7,7 +7,8 @@ namespace Demoniac.PlayerInputSubsystem
     {
         public float Horizontal => Input.GetAxisRaw("Horizontal");
 
-        public bool Jump => _jumpButton.IsDown;
+        public bool JumpDown => _jumpButton.IsDown;
+        public bool JumpPressed => _jumpButton.IsPressed;
         public bool Menu => _menuButton.IsDown;
         public bool Submit => _submitButton.IsDown;
         public bool Cancel => _cancel.IsDown;
@@ -53,9 +54,11 @@ namespace Demoniac.PlayerInputSubsystem
                     }  
                 }
             }
+            public bool IsPressed { get; private set; }
 
             public void Update(bool isPressed)
             {
+                IsPressed = isPressed;
                 if (isPressed && !_wasPressedPreviousFrame)
                 {
                     _isDown = true;
