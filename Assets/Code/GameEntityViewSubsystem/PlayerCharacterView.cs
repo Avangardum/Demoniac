@@ -8,6 +8,7 @@ namespace Demoniac.GameEntityViewSubsystem
         public PlayerCharacterView(GameEntity gameEntity) : base(gameEntity)
         {
             Sprite = SpriteStorage.Square;
+            _spriteRenderer.color = Color.green;
             AnimatorController = AnimatorControllerStorage.PlayerCharacter;
         }
     }

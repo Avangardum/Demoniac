@@ -72,7 +72,8 @@ namespace Demoniac.GameEntityModelSubsystem
         public void CreatePlayerCharacter(Vector2 position) => Add(new PlayerCharacter(position, _playerInputSubsystemFacade));
         private void FrameAction(float frameTime)
         {
-            foreach (var entity in this)
+            var gameEntities = _gameEntities.ToArray();
+            foreach (var entity in gameEntities)
                 entity.FrameAction(frameTime);
         }
     }

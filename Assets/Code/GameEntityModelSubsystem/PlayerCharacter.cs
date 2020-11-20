@@ -97,11 +97,21 @@ namespace Demoniac.GameEntityModelSubsystem
             Move(_velocity * frameTime);
             
             //Проверка столконвений
-            var solidTerrainElements = Storage.Where(x => x is SolidTerrainElement);
-            //Снизу
-            var steOverlappingWithBottom = solidTerrainElements.Where(x => OverlapsWithBottom(x)).ToArray();
+            var solidTerrainElements = Storage.Where(x => x is SolidTerrainElement).ToArray();
+            
+            var steOverlappingWithBottom = solidTerrainElements.Where(OverlapsWithBottom).ToArray();
             _isGrounded = steOverlappingWithBottom.Length > 0;
-            if (steOverlappingWithBottom.Length > 0)
+            
+            var steOverlappingWithTop = solidTerrainElements.Where(OverlapsWithTop).ToArray();
+            _isAtCeiling = steOverlappingWithTop.Length > 0;
+            
+            if ((_isGrounded && _isAtCeiling) || (_isPushingLeftWall && _isPushingRightWall))
+            {
+                Squeeze();
+            }
+            
+            //Снизу
+            if (_isGrounded)
             {
                 float[] overlapAmounts = new float[steOverlappingWithBottom.Length];
                 for (int i = 0; i < steOverlappingWithBottom.Length; i++)
@@ -111,6 +121,20 @@ namespace Demoniac.GameEntityModelSubsystem
 
                 var maxOverlapAmmount = overlapAmounts.Max();
                 Move(0, maxOverlapAmmount);
+                _velocity.y = 0;
+            }
+            //Сверху
+            
+            if (_isAtCeiling)
+            {
+                float[] overlapAmounts = new float[steOverlappingWithTop.Length];
+                for (int i = 0; i < steOverlappingWithTop.Length; i++)
+                {
+                    overlapAmounts[i] = this.TopLeft.y - steOverlappingWithTop[i].BottomLeft.y;
+                }
+
+                var maxOverlapAmmount = overlapAmounts.Max();
+                Move(0, -maxOverlapAmmount);
                 _velocity.y = 0;
             }
         }

@@ -6,7 +6,7 @@ namespace Demoniac.GameEntityModelSubsystem
     {
         public TestPlatform(Vector2 position) : base(position)
         {
-            Size = new Vector2(10, 1);
+            Size = new Vector2(5, 5);
         }
     }
 }

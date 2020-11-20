@@ -18,8 +18,10 @@ namespace Demoniac.TestSubsystem
 
         private void StartTesting()
         {
-            _gameEntityStorage.CreateTestPlatform(new Vector2(0, -2));
-            _gameEntityStorage.CreatePlayerCharacter(new Vector2(0, 3));
+            _gameEntityStorage.CreateTestPlatform(new Vector2(0, -4));
+            _gameEntityStorage.CreateTestPlatform(new Vector2(4, -1));
+            _gameEntityStorage.CreateTestPlatform(new Vector2(-3, 4));
+            _gameEntityStorage.CreatePlayerCharacter(new Vector2(0, 0));
         }
     }
 }

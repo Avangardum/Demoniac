@@ -88,7 +88,10 @@ namespace Demoniac.GameEntityModelSubsystem
         }
         public bool OverlapsWithTop(GameEntity other)
         {
-            throw new NotImplementedException();
+            return this.TopLeft.y <= other.TopLeft.y && 
+                   this.TopLeft.y >= other.BottomLeft.y &&
+                   this.BottomRight.x >= other.TopLeft.x &&
+                   this.BottomLeft.x <= other.TopRight.x;
         }
         public bool OverlapsWithLeft(GameEntity other)
         {

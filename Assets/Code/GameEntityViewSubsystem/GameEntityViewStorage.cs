@@ -33,7 +33,6 @@ namespace Demoniac.GameEntityViewSubsystem
             _spriteStorage = spriteStorage;
             _animatorControllerStorage = animatorControllerStorage;
             _gameEntityStorage.GameEntityCreated += OnGameEntityCreated;
-            _gameEntityStorage.GameEntityDeleted += OnGameEntityDeleted;
         }
 
         public IEnumerator<GameEntityView> GetEnumerator()
@@ -73,24 +72,6 @@ namespace Demoniac.GameEntityViewSubsystem
             Type viewType = _gameEntityViewTypes[gameEntity.GetType()];
             GameEntityView view = (GameEntityView)Activator.CreateInstance(viewType, gameEntity);
             Add(view);
-            // if (gameEntity is TestSquare)
-            //     Add(new TestSquareView(gameEntity));
-            // else if (gameEntity is TestCircle)
-            //     Add(new TestCircleView(gameEntity));
-            // else if (gameEntity is TestHexagon)
-            //     Add(new TestHexagonView(gameEntity));
-            // else if (gameEntity is TestPlatform)
-            //     Add(new TestPlatformView(gameEntity));
-            // else if (gameEntity is PlayerCharacter)
-            //     Add(new PlayerCharacterView(gameEntity));
-            // else
-            //     throw new Exception($"Cannot create view for {gameEntity.GetType()}");
-        }
-        
-        private void OnGameEntityDeleted(GameEntity gameEntity)
-        {
-            GameEntityView view = _gameEntityViews.Single(x => x.GameEntity == gameEntity);
-            Remove(view);
         }
     }
 }
