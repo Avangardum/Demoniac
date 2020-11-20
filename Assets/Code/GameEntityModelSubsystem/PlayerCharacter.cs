@@ -46,17 +46,6 @@ namespace Demoniac.GameEntityModelSubsystem
             _wasPushingRightWall = _isPushingRightWall;
             _wasGrounded = _isGrounded;
             _wasAtCeiling = _isAtCeiling;
-
-            //проверка на приземлённость
-            if (Position.y < 0)
-            {
-                Position = new Vector2(Position.x, 0);
-                _isGrounded = true;
-            }
-            else
-            {
-                _isGrounded = false;
-            }
             
             //рассчёт скорости по x
             float maxXVelocityDelta = MoveAcceleration * frameTime;
@@ -106,6 +95,24 @@ namespace Demoniac.GameEntityModelSubsystem
             _velocity.y = Mathf.Clamp(_velocity.y, -MAXVerticalSpeed, MAXVerticalSpeed);
             
             Move(_velocity * frameTime);
+            
+            //Проверка столконвений
+            var solidTerrainElements = Storage.Where(x => x is SolidTerrainElement);
+            //Снизу
+            var steOverlappingWithBottom = solidTerrainElements.Where(x => OverlapsWithBottom(x)).ToArray();
+            _isGrounded = steOverlappingWithBottom.Length > 0;
+            if (steOverlappingWithBottom.Length > 0)
+            {
+                float[] overlapAmounts = new float[steOverlappingWithBottom.Length];
+                for (int i = 0; i < steOverlappingWithBottom.Length; i++)
+                {
+                    overlapAmounts[i] = steOverlappingWithBottom[i].TopLeft.y - this.BottomLeft.y;
+                }
+
+                var maxOverlapAmmount = overlapAmounts.Max();
+                Move(0, maxOverlapAmmount);
+                _velocity.y = 0;
+            }
         }
 
         private Vector2 ShortenVector2(Vector2 vector, Vector2 shortening)

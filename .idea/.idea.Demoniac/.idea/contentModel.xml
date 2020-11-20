@@ -38,6 +38,9 @@
             <e p="SubsystemInitializer.cs" t="Include" />
             <e p="UnityMethodListener.cs" t="Include" />
           </e>
+          <e p="Miscelanneous" t="Include">
+            <e p="MyDebug.cs" t="Include" />
+          </e>
           <e p="PlayerInputSubsystem" t="Include">
             <e p="KeyboardAndGamepadPlayerInput.cs" t="Include" />
             <e p="PlayerInputSubsystemFacade.cs" t="Include" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 
 namespace Demoniac.GameEntityModelSubsystem
@@ -18,7 +19,11 @@ namespace Demoniac.GameEntityModelSubsystem
         {
             Position = position;
             Size = Vector2.one;
+            RecalculateCorners();
+            PositionChanged += RecalculateCorners;
+            SizeChanged += RecalculateCorners;
         }
+        
         public Vector2 Position
         {
             get => _position;
@@ -41,6 +46,10 @@ namespace Demoniac.GameEntityModelSubsystem
         }
 
         public Vector2 HalfSize { get; private set; }
+        public Vector2 BottomLeft { get; private set; }
+        public Vector2 BottomRight { get; private set; }
+        public Vector2 TopLeft { get; private set; }
+        public Vector2 TopRight { get; private set; }
 
         public virtual void FrameAction(float frameTime) { }
 
@@ -52,57 +61,42 @@ namespace Demoniac.GameEntityModelSubsystem
 
         public void Move(Vector2 move) => Position += move;
         public void Move(float x, float y) => Move(new Vector2(x, y));
-        
-        /// <summary>
-        /// Пересекается ли данный объект с другим
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
-        public bool Overlaps(GameEntity other)
+
+        private void RecalculateCorners()
         {
-            Vector2 overlapAmount = OverlapAmount(other);
-            return overlapAmount.x > 0 && overlapAmount.y > 0;
-        }
-        /// <summary>
-        /// Пересекался ли бы данный объект с другим, если бы данный объект имел другую позицию
-        /// </summary>
-        /// <param name="other"></param>
-        /// <param name="assumedPositon"></param>
-        /// <returns></returns>
-        public bool OverlapsAssumePosition(GameEntity other, Vector2 assumedPositon)
-        {
-            Vector2 overlapAmount = OverlapAmountAssumePosition(other, assumedPositon);
-            return overlapAmount.x > 0 && overlapAmount.y > 0;
+            TopRight = Position + HalfSize;
+            BottomLeft = Position - HalfSize;
+            TopLeft = Position + new Vector2(-HalfSize.x, HalfSize.y);
+            BottomRight = Position + new Vector2(HalfSize.x, -HalfSize.y);
         }
 
-        private static Vector2 OverlapAmount(Vector2 entity1Pos, Vector2 entity2Pos, Vector2 entity1HalfSize, Vector2 entity2HalfSize)
+        private void RecalculateCorners(Vector2 arg) => RecalculateCorners();//Аргумент не используется и нужен только для соотвествия делегату Action<float>
+
+        public bool Overlaps(GameEntity other)
         {
-            float xDistance = Mathf.Abs(entity1Pos.x - entity2Pos.x);
-            float yDistance = Math.Abs(entity1Pos.y - entity2Pos.y);
-            float xHalfSizeSum = entity1HalfSize.x + entity2HalfSize.x;
-            float yHalfSizeSum = entity1HalfSize.y + entity2HalfSize.y;
-            float xOverlapAmount = xHalfSizeSum - xDistance;
-            float yOverlapAmount = yHalfSizeSum - yDistance;
-            return new Vector2(xOverlapAmount, yOverlapAmount);
+            if ( Mathf.Abs(Position.x - other.Position.x) > HalfSize.x + other.HalfSize.x ) return false;
+            if ( Mathf.Abs(Position.y - other.Position.y) > HalfSize.y + other.HalfSize.y ) return false;
+            return true;
         }
-        /// <summary>
-        /// Насколько сильно пересекается данный объект с другим
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
-        public Vector2 OverlapAmount(GameEntity other)
+
+        public bool OverlapsWithBottom(GameEntity other)
         {
-            return OverlapAmount(this.Position, other.Position, this.HalfSize, other.HalfSize);
+            return this.BottomLeft.y <= other.TopLeft.y &&
+                   this.BottomLeft.y >= other.BottomLeft.y &&
+                   this.BottomRight.x >= other.TopLeft.x &&
+                   this.BottomLeft.x <= other.TopRight.x;
         }
-        /// <summary>
-        /// Насколько сильно бы данный объект пересекался с другим, если бы данный объект имел другую позицию
-        /// </summary>
-        /// <param name="other"></param>
-        /// <param name="assumedPosition"></param>
-        /// <returns></returns>
-        public Vector2 OverlapAmountAssumePosition(GameEntity other, Vector2 assumedPosition)
+        public bool OverlapsWithTop(GameEntity other)
         {
-            return OverlapAmount(assumedPosition, other.Position, this.HalfSize, other.HalfSize);
+            throw new NotImplementedException();
+        }
+        public bool OverlapsWithLeft(GameEntity other)
+        {
+            throw new NotImplementedException();
+        }
+        public bool OverlapsWithRight(GameEntity other)
+        {
+            throw new NotImplementedException();
         }
     } 
 }
